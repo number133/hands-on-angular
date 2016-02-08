@@ -10,19 +10,28 @@ angular.module('swFrontApp').service('edges', function() {
             name: 'Background'
           },
           requirements: [
-            { name: null, value: 'Novice' },
+            { name: null, value: 'Novice', mode: 'rank' },
             { name: 'Vigor', value: 'd6'}
           ]
         },
         {
-          name: 'Attractive',
+          name: 'Woman',
           description: 'blah...',
           category: {
-            name: 'Background'
+            name: 'Combat'
           },
           requirements: [
-            { name: null, value: 'Novice' },
-            { name: 'Vigor', value: 'd6'}
+            { name: null, value: 'Seasoned', mode: 'rank' },
+          ]
+        },
+        {
+          name: 'Walks by',
+          description: 'blah...',
+          category: {
+            name: 'Leadership'
+          },
+          requirements: [
+            { name: null, value: 'Third' },
           ]
         }
       ];
