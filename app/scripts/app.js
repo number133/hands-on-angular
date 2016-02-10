@@ -26,6 +26,10 @@ angular
         templateUrl: 'views/edges.html',
         controller: 'EdgesController',
       })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginController',
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
