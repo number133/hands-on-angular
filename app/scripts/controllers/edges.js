@@ -8,17 +8,12 @@
  * Controller of the swFrontApp
  */
 angular.module('swFrontApp')
-  .controller('EdgesController', function ($scope, edges, categories, ranks) {
-    
+  .controller('EdgesController', function ($scope, edges, filterBy) {
     $scope.edges = edges.query();
-    $scope.categories = categories.query();
-    $scope.ranks = ranks.query();
-    
-    $scope.filterBy = {
-      search: '',
-      category: $scope.categories[0],
-      rank: $scope.ranks[0]
-    }
+    $scope.filterBy = filterBy;
+    $scope.deleteEdge = function(edge){
+      edge.$delete();
+    };
     var selectedEdge = null;
     
     $scope.selectEdge = function(edge){
